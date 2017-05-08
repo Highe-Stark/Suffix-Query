@@ -28,7 +28,7 @@ int main()
 	for (set<string>::iterator it = lexicon.begin(); it != lexicon.end(); ++it) {
 		if (it->size() < num) continue;
 		string suf = get(*it,it->size() - num, it->size());
-		suffix_map[suf].push_back(suf);
+		suffix_map[suf].push_back(*it);
 	}
 	vector<string> most_suffix;
 	//set<string> suffix;
